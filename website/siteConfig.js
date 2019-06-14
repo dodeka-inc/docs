@@ -54,8 +54,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { page: 'contribua', label: 'Contribua' },
-    { page: 'comunidade', label: 'Comunidade' }
+    //{ page: 'contribua', label: 'Contribua' },
+    //{ page: 'comunidade', label: 'Comunidade' }
     // { doc: 'ambiente-react-native/ambiente/introducao', label: 'Docs' }
   ],
 
@@ -69,6 +69,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
+    //primaryColor: '#7159c1',
+    //secondaryColor: '#6C4FBB'
     primaryColor: '#7159c1',
     secondaryColor: '#6C4FBB'
   },
