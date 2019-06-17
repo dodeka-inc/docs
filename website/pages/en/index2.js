@@ -47,6 +47,7 @@ class HomeSplash extends React.Component {
     const ProjectTitle = () => (
       <h2 className="projectTitle">
         {siteConfig.title}
+        <small>{siteConfig.tagline}</small>
       </h2>
     )
 
@@ -56,7 +57,17 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <div className="docs-grid">
-
+            {Docs.map(doc => (
+              <a
+                key={doc.path}
+                className="item"
+                href={`${docsPart + doc.path}/introducao`}
+              >
+                <i className={doc.icon} />
+                <h3>{doc.title}</h3>
+                <p>{doc.description}</p>
+              </a>
+            ))}
           </div>
         </div>
       </SplashContainer>
@@ -68,6 +79,20 @@ class Index extends React.Component {
   render() {
     const { config: siteConfig, language = '' } = this.props
     const { baseUrl } = siteConfig
+
+    const Block = props => (
+      <Container
+        padding={['bottom', 'top']}
+        id={props.id}
+        background={props.background}
+      >
+        <GridBlock
+          align="center"
+          contents={props.children}
+          layout={props.layout}
+        />
+      </Container>
+    )
 
     const FeatureCallout = () => (
       <div

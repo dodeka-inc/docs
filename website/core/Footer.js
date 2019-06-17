@@ -20,9 +20,11 @@ class Footer extends React.Component {
       }
     ],
     more: [
+        /*
       { label: 'Comunidade', path: 'https://www.rocketseat.com.br/comunidade' },
       { label: 'Cursos gratuitos', path: 'https://rocketseat.com.br/starter' },
       { label: 'Github', path: 'https://github.com/rocketseat' }
+      */
     ]
   }
 
@@ -43,6 +45,7 @@ class Footer extends React.Component {
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
+			{ /*}
           <a href={this.props.config.baseUrl} className="nav-home">
             {this.props.config.footerIcon && (
               <img
@@ -61,13 +64,16 @@ class Footer extends React.Component {
               </a>
             ))}
           </div>
+		  */ }
           <div>
+              { /*}
             <h5>Mais</h5>
             {this.links.more.map(link => (
               <a key={link.label} href={link.path}>
                 {link.label}
               </a>
             ))}
+            */ }
           </div>
           {/* <div>
             <h5>Docs</h5>
@@ -80,7 +86,7 @@ class Footer extends React.Component {
             <a href={this.docUrl('doc3.html', this.props.language)}>
               API Reference (or other categories)
             </a>
-          </div> 
+          </div>
           <div>
             <h5>Community</h5>
             <a href={this.pageUrl('users.html', this.props.language)}>
